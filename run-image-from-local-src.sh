@@ -1,0 +1,1 @@
+docker run --rm --name run-sdag-interval-merge-src_name -it sdag-interval-merge-src:v1

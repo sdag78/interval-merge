@@ -1,0 +1,1 @@
+docker build -t sdag-interval-merge-src:v1 .
