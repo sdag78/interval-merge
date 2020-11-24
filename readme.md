@@ -6,15 +6,15 @@
 * [Design-enhancements-to-work-with-large-datasets](#design-enhancements-to-work-with-large-datasets)
 
 ## General info
-This project is a java program to merge intervals in a list, e.g. [25,30] [2,19] [14, 23] [4,8]. The result should be: [25,30] [2,23]. 
+This project is a Java program to merge intervals in a list, e.g. [25,30] [2,19] [14, 23] [4,8]. The result should be: [25,30] [2,23]. 
 
 Unit tests are provided. 
 
 The solution is provided with a Dockerfile. The container uses an official openJDK image to build an executable jar file from the source code, and then runs a main method to display a text prompt, and take the text input which can be pasted in. The program processes the data, and displays the result list. It then allows the user to enter further lists, or exit the program by typing "exit".
 
-See the section "Setup", for the docker commands to build and run the docker container directly from the Github repository. 
+See the section "Setup", for the Docker commands to build and run the Docker container directly from the Github repository. 
 
-Alternatively the repository can be checked out using Git, and built and run using JDK version 8. In this case the java compiler is expected to be on the path.
+Alternatively the repository can be checked out using Git, and built and run using JDK version 8. In this case the Java compiler is expected to be on the path.
 
 ## Lösungsidee
 
@@ -23,26 +23,21 @@ Each interval of the input list is processed against all intervals of the output
 
 ## Technologies
 The project is created with:
-* Java 8
+* Java 8 / Java 9
+* Eclipse
 * Docker
 
 ## Setup
-To run this project using docker, use the following docker commands:
-
+Check out the repository, then use the following scripts to let Docker build and run the locally checked out repo: 
 ```
-docker build -t sdag-interval-merge:v1 https://github.com/sdag78/interval-merge.git#main  
-docker run --rm --name run-sdag-interval-merge -it sdag-interval-merge:v1
+a1_build-docker-image-from-local-src.sh 
+a2_run-docker-image-from-local-src.sh 
 ```
-
-alternatively use the following scripts to run docker:
-build-image-from-github.sh
-run-image-from-github.sh
-
-or
-
-build-image-from-local-src.sh 
-run-image-from-local-src.sh 
-
+or, to build the program using a locally installed jdk, without Docker, run:
+```
+b1_java_build.sh
+b2_java_run.sh
+```
 
 # Questions
 
