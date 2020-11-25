@@ -26,6 +26,7 @@ The project is created with:
 * Java 8 / Java 9
 * Eclipse
 * Docker
+* Junit 5
 
 ## Setup
 Check out the repository, then use the following scripts to let Docker build and run the locally checked out repo: 
